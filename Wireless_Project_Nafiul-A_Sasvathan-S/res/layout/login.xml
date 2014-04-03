@@ -45,8 +45,6 @@
         android:layout_alignLeft="@+id/uNameTxt"
         android:ems="10"
         android:inputType="textPassword" >
-
-        <requestFocus />
     </EditText>
 
     <Button
