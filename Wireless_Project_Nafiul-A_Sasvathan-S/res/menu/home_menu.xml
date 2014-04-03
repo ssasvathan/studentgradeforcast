@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/homeMenuBtn" android:title="@string/home"></item>
+    <item android:id="@+id/forecastlogOut" android:title="@string/logOut"></item>
+
+</menu>

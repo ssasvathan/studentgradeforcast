@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Welcome Student Portal</string>
+    <string name="studentHome">Student Home</string>
+    <string name="signUpStudent">Student Sign Up</string>
+    <string name="allCourse">List of All Courses</string>
+    <string name="editCourse">Edit Courses</string>
+    <string name="editAddAssessment">Add/Edit Assessments</string>
+    <string name="addNewCourse">Add New Course</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="logOut">Log Out</string>
+    <string name="userName">User Name:</string>
+    <string name="password">Password:</string>
+    <string name="login">Log In</string>
+    <string name="signUpBtn">Sign Up</string>
+    <string name="firstName">First Name:</string>
+    <string name="lastName">Last Name:</string>
+    <string name="userInof">User Information</string>
+    <string name="Edit">Edit</string>
+    <string name="foreCast">Forecast</string>
+    <string name="forcastResult">Forecast Results:</string>
+    <string name="toA1">To get grade A+:</string>
+    <string name="toA">To get grade A:</string>
+    <string name="toB1">To get grade B+:</string>
+    <string name="toB">To get grade B:</string>
+    <string name="toC1">To get grade C+:</string>
+    <string name="toC">To get grade C:</string>
+    <string name="toD1">To get grade D+:</string>
+    <string name="toD">To get grade D:</string>
+    <string name="unattainable">A requirement of 0.00 signifies that this grade is currently unattainable</string>
+    <string name="submitText">Submit</string>
+    <string name="courseBtnText">View Courses</string>
+    <string name="nameText">Name</string>
+    <string name="gradeText">Grade (%)</string>
+    <string name="weightText">Weight</string>
+    <string name="Delete">Delete</string>
+    <string name="addText">Add</string>
+    <string name="ViewCourses">View Courses</string>
+    <string name="AddCourse">Add Course</string>
+    <string name="DeleteCourse">Delete Course</string>
+    <string name="AddAsses">Add Assessment</string>
+    <string name="DeleteAsses">Delete Assessment</string>
+    <string name="gradeForcast">Grade Forecast</string>
+    <string name="totalMark">Total Score</string>
+    <string name="eventSceduler">Event Scheduler</string>
+    <string name="cCourse">Create Course</string>
+    <string name="home">Home</string>
+    
+    <string name="descHeading">Project Description:</string>
+    <string name="author1">Project Author: Sasvathan Sarvanandan</string>
+    <string name="author2">Project Author: Nafiul Ahasan</string>
+    <string name="projDesc">
+        This Project Allows Student to Record their Assessments for individual courses and allow them 
+        forecast their grades for each grades such as A+,A,B+ and so on.
+        
+    </string>
+
+</resources>

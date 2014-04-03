@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/addCourse" android:title="@string/AddCourse"></item>
+    <item android:id="@+id/courselogOut" android:title="@string/logOut"></item>
+    <item android:id="@+id/caHomeBtn" android:title="@string/home"></item>
+</menu>

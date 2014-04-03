@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cen.comp313.student_portal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+              <activity
+            android:name="cen.comp313.student_portal.Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cen.comp313.student_portal.Student_Home" 
+         android:label="@string/studentHome"></activity>
+        <activity android:name="cen.comp313.student_portal.SignUp" 
+         android:label="@string/signUpStudent"></activity>
+        <activity android:name="cen.comp313.student_portal.Grade_ForeCast" 
+         android:label="@string/gradeForcast"></activity>
+        <activity android:name="cen.comp313.student_portal.test" 
+         android:label="@string/app_name"></activity>
+        <activity android:name="cen.comp313.student_portal.AllProductsActivity" 
+         android:label="@string/allCourse"></activity>
+        <activity android:name="cen.comp313.student_portal.EditCourse" 
+         android:label="@string/editCourse"></activity>
+        <activity android:name="cen.comp313.student_portal.EditAsses" 
+         android:label="@string/editAddAssessment"></activity>
+        <activity android:name="cen.comp313.student_portal.AddCourse" 
+         android:label="@string/addNewCourse"></activity>
+		<activity android:name="cen.comp313.student_portal.Tab_Activity" 
+         android:label="@string/studentHome"></activity>
+		<activity android:name="cen.comp313.student_portal.Help" 
+         android:label="@string/studentHome"></activity>
+		 
+    </application>
+
+</manifest>
