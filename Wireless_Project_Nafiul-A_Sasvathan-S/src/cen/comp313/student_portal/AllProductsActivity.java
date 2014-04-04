@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
  
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -132,9 +133,10 @@ public class AllProductsActivity extends ListActivity {
 	        	}
 	        		return true;
 	        case R.id.caHomeBtn:
-	        	  Intent in = new Intent(AllProductsActivity.this, Student_Home.class);
-		          in.putExtra("studentID", studentID);
-		          startActivity(in);
+//	        	  Intent in = new Intent(AllProductsActivity.this, Student_Home.class);
+//		          in.putExtra("studentID", studentID);
+//		          startActivity(in);
+	        	startActivity(new Intent(AllProductsActivity.this, Tab_Activity.class));
 	        default:
 	        	return super.onOptionsItemSelected(item);
 	     } // end switch

@@ -235,7 +235,6 @@ public class AddCourse extends ListActivity{
 	            	
 	            } else {
 	                // failed to create product
-	            	Toast.makeText(getApplicationContext(), "Unable to Add!", Toast.LENGTH_SHORT).show();
 	            }
 	        } catch (JSONException e) {
 	            e.printStackTrace();
@@ -330,11 +329,6 @@ public class AddCourse extends ListActivity{
                     }
                 } else {
                     // no products found
-                    // Launch Add New product Activity
-                  Intent i = new Intent(getApplicationContext(), test.class);
-                    // Closing all previous activities
-                   i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                   startActivity(i);
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

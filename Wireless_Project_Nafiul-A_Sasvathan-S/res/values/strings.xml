@@ -38,7 +38,7 @@
     <string name="addText">Add</string>
     <string name="ViewCourses">View Courses</string>
     <string name="AddCourse">Add Course</string>
-    <string name="DeleteCourse">Delete Course</string>
+    <string name="DeleteCourse">Delete All Assesments</string>
     <string name="AddAsses">Add Assessment</string>
     <string name="DeleteAsses">Delete Assessment</string>
     <string name="gradeForcast">Grade Forecast</string>

@@ -19,7 +19,7 @@ if (isset($_GET["studentID"])) {
     $studentID = $_GET['studentID'];
  
     // get courses by student ID from COURSE table
-    $result = mysql_query("SELECT studentcourse.courseID, course.courseName FROM studentcourse JOIN course ON (studentcourse.courseID = course.courseID) WHERE studentcourse.studentID = '$studentID'");
+    $result = mysql_query("SELECT studentCourse.courseID, course.courseName FROM studentCourse JOIN course ON (studentCourse.courseID = course.courseID) WHERE studentCourse.studentID = '$studentID'");
  
     if (!empty($result)) {
         // check for empty result

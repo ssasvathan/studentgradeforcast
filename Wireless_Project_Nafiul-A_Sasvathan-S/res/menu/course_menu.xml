@@ -3,7 +3,7 @@
     <item android:id="@+id/addAsses" android:title="@string/AddAsses"></item>
     <item android:id="@+id/deleteCourse" android:title="@string/DeleteCourse"></item>
     <item android:id="@+id/gradeForcast" android:title="@string/gradeForcast"></item>
-    <item android:id="@+id/assessmentlogOut" android:title="@string/logOut"></item>
     <item android:id="@+id/cHomeBtn" android:title="@string/home"></item>
+    <item android:id="@+id/assessmentlogOut" android:title="@string/logOut"></item>
 
 </menu>

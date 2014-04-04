@@ -125,7 +125,7 @@ public class SignUp extends Activity {
          * **/
         protected void onPostExecute(String file_url) {
             // dismiss the dialog once done
-            pDialog.dismiss();
+            //pDialog.dismiss();
         }
  
     }
@@ -150,62 +150,75 @@ public class SignUp extends Activity {
 			// getting JSON Object
 			// Note that create product url accepts POST method
 			json = jsonParser.makeHttpRequest(url_create_product, "POST",params);
+			
+			// check for success tag
+	        try {
+	            int success = json.getInt(TAG_SUCCESS);
+
+	            if (success == 1) { 
+	                					
+	                finish();
+	            } else {
+	                // failed to create product
+	            	Toast.makeText(getApplicationContext(), "Unable to create student!", Toast.LENGTH_SHORT).show();
+	            }
+	        } catch (JSONException e) {
+	            e.printStackTrace();
+	        }
+	        
 		} else {
 			// getting JSON Object
 			// Note that create product url accepts POST method
 			json = jsonParser.makeHttpRequest(url_update_student, "POST",params);
-		}
+			
+			// check for success tag
+	        try {
+	            int success = json.getInt(TAG_SUCCESS);
 
-        // check log cat fro response
-        Log.d("Create Response", json.toString());
+	            if (success == 1) { 
+	                // closing this screen and going to login screen
+	            	// Building Parameters
+					List<NameValuePair> paramms = new ArrayList<NameValuePair>();
+					paramms.add(new BasicNameValuePair("studentID", String.valueOf(studentID)));
 
-        // check for success tag
-        try {
-            int success = json.getInt(TAG_SUCCESS);
+					// getting product details by making HTTP request
+					// Note that product details url will use GET request
+					jsonParser= new JSONParser();
+					json = jsonParser.makeHttpRequest(
+							Login.url_get_student, "GET", paramms);
 
-            if (success == 1) { 
-                // closing this screen and going to login screen
-            	// Building Parameters
-				List<NameValuePair> paramms = new ArrayList<NameValuePair>();
-				paramms.add(new BasicNameValuePair("studentID", String.valueOf(studentID)));
+					// check your log for json response
+					Log.d("Get Studnet", json.toString());
 
-				// getting product details by making HTTP request
-				// Note that product details url will use GET request
-				jsonParser= new JSONParser();
-				json = jsonParser.makeHttpRequest(
-						Login.url_get_student, "GET", paramms);
+					// json success tag
+					success = json.getInt("success");
+					if (success == 1) {
+						// successfully received product details
+						JSONArray productObj = json.getJSONArray("student"); // JSON
+																				// Array
 
-				// check your log for json response
-				Log.d("Get Studnet", json.toString());
+						// get first product object from JSON Array
+						JSONObject product = productObj.getJSONObject(0);
 
-				// json success tag
-				success = json.getInt("success");
-				if (success == 1) {
-					// successfully received product details
-					JSONArray productObj = json.getJSONArray("student"); // JSON
-																			// Array
-
-					// get first product object from JSON Array
-					JSONObject product = productObj.getJSONObject(0);
-
-					Student student = new Student();
-					// display product data in EditText
-					student.setID(product.getInt("studentID"));
-					student.setFirstName(product.getString("firstName"));
-					student.setLastName(product.getString("lastName"));
-					student.setUserName(product.getString("userName"));
-					student.setPassword(product.getString("password"));
-					Login.currentStudent = student;
-				}
-					
-                finish();
-            } else {
-                // failed to create product
-            	Toast.makeText(getApplicationContext(), "Unable to create student!", Toast.LENGTH_SHORT).show();
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+						Student student = new Student();
+						// display product data in EditText
+						student.setID(product.getInt("studentID"));
+						student.setFirstName(product.getString("firstName"));
+						student.setLastName(product.getString("lastName"));
+						student.setUserName(product.getString("userName"));
+						student.setPassword(product.getString("password"));
+						Login.currentStudent = student;
+					}
+						
+	                finish();
+	            } else {
+	                // failed to create product
+	            	Toast.makeText(getApplicationContext(), "Unable to update student!", Toast.LENGTH_SHORT).show();
+	            }
+	        } catch (JSONException e) {
+	            e.printStackTrace();
+	        }
+		}        
     }
     
     private boolean validateForm()

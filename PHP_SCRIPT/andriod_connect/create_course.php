@@ -20,7 +20,7 @@ if (isset($_POST['courseName'])) {
     $db = new DB_CONNECT();
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO Course(courseName) VALUES('$courseName')");
+    $result = mysql_query("INSERT INTO course(courseName) VALUES('$courseName')");
  
     // check if row inserted or not
     if ($result) {

@@ -12,6 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -138,9 +139,10 @@ public class EditCourse extends Activity {
 	        	}
 	        		return true;
 	    	case R.id.cHomeBtn:
-	    		 Intent in = new Intent(EditCourse.this, Student_Home.class);
-		         in.putExtra("studentID", studentID);
-		         startActivity(in);
+//	    		 Intent in = new Intent(EditCourse.this, Student_Home.class);
+//		         in.putExtra("studentID", studentID);
+//		         startActivity(in);
+	    		startActivity(new Intent(EditCourse.this, Tab_Activity.class));
 	    		return true;
 	        default:
 	        	return super.onOptionsItemSelected(item);

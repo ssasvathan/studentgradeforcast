@@ -23,7 +23,7 @@ if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['use
     $db = new DB_CONNECT();
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO Student(firstName, lastName, userName,password) VALUES('$firstName', '$lastName', '$userName', '$password')");
+    $result = mysql_query("INSERT INTO student(firstName, lastName, userName,password) VALUES('$firstName', '$lastName', '$userName', '$password')");
  
     // check if row inserted or not
     if ($result) {

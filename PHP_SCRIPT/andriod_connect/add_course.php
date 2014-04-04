@@ -22,7 +22,7 @@ if (isset($_POST['studentID']) && isset($_POST['courseID'])) {
     $db = new DB_CONNECT();
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO studentcourse(studentID, courseID) VALUES('$studentID', '$courseID')");
+    $result = mysql_query("INSERT INTO studentCourse(studentID, courseID) VALUES('$studentID', '$courseID')");
  
     // check if row inserted or not
     if ($result) {
